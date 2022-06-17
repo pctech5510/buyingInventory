@@ -36,7 +36,7 @@ string itemName = option switch
     _ => "Try another Selection"
 };
 
-int itemCost = option switch
+float itemCost = option switch
 
 {
     1 => 10,
@@ -50,11 +50,11 @@ int itemCost = option switch
 
 };
 
-int discount = itemCost / 2;
 if (name == "jeff")
 {
+    itemCost /= 2;
     Console.WriteLine("Welcome Jeff! Please Enjoy your 50% off discount!");
-    Console.WriteLine($"The cost of {itemName} is {discount}");
+    Console.WriteLine($"The cost of {itemName} is {itemCost}");
 } else
 Console.WriteLine($"The cost of {itemName} is {itemCost}");
 
